@@ -3,7 +3,7 @@ from building import *
 cwd  = GetCurrentDir()
 path = [cwd]
 
-src  = Glob('*.c')
+src  = Glob('thread_pool.c')
 
 if GetDepend(['THREAD_POOL_USING_SAMPLES']):
     src += Glob('thread_pool_sample.c')
