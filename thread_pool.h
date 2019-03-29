@@ -13,6 +13,8 @@
 #include <rtthread.h>
 #include <string.h>
 
+#define THREAD_POOL_VER              "4.0.1"
+
 #define THREAD_POOL_THREADS_INIT_TIME     30    /**< threads initialize average waiting time */
 #define THREAD_POOL_JOB_DEFAULT_PRIORITY  10    /**< thread poll job's priority in rt-thread */
 #define THREAD_POOL_JOB_TICK               5    /**< thread poll job's time slice in rt-thread */
