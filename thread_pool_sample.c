@@ -19,9 +19,9 @@
 #include "thread_pool.h"
 
 static void task(void *arg) {
-    LOG_I("The task on thread %.*s is running", RT_NAME_MAX, rt_thread_self()->name);
+    LOG_I("The task on thread %.*s is running.", RT_NAME_MAX, rt_thread_self()->name);
     rt_thread_delay(rt_tick_from_millisecond((uint32_t)arg));
-    LOG_I("The task on thread %.*s will finish", RT_NAME_MAX, rt_thread_self()->name);
+    LOG_I("The task on thread %.*s will finish.", RT_NAME_MAX, rt_thread_self()->name);
 }
 
 static void thread_pool_sample(uint8_t argc, char **argv) {
