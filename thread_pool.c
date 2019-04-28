@@ -63,7 +63,7 @@ thread_pool_err init_thread_pool(thread_pool_t const pool, const char* name, uin
     for (i = 0; i < max_thread_num; i++) {
         rt_snprintf(job_name, THREAD_POOL_NAME_MAX, "%s_%d", name, i);
         pool->thread_id[i] = rt_thread_create(job_name, thread_job, pool, thread_stack_size,
-                THREAD_POOL_JOB_DEFAULT_PRIORITY, THREAD_POOL_JOB_TICK * i);
+                THREAD_POOL_JOB_DEFAULT_PRIORITY, THREAD_POOL_JOB_TICK);
         RT_ASSERT(pool->thread_id[i] != NULL);
         rt_thread_startup(pool->thread_id[i]);
         LOG_D("create thread success.Current total thread number is %d", i + 1);
