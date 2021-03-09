@@ -10,7 +10,7 @@
 #include <thread_pool.h>
 
 #define DBG_SECTION_NAME               "thread_pool"
-#define DBG_LEVEL                      DBG_LOG
+#define DBG_LEVEL                      DBG_INFO
 #include <rtdbg.h>
 
 #ifdef PKG_USING_THREAD_POOL
